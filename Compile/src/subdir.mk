@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../src/Test.cpp \
+../src/TestBuscador.cpp \
+../src/TestIndexador.cpp 
+
+OBJS += \
+./src/Test.o \
+./src/TestBuscador.o \
+./src/TestIndexador.o 
+
+CPP_DEPS += \
+./src/Test.d \
+./src/TestBuscador.d \
+./src/TestIndexador.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/%.o: ../src/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ -std=c++0x -I"../include" -I"../cute" -I"../boost" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
