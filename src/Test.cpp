@@ -654,7 +654,7 @@ int runSuiteTemporal(const string& directorioPruebas, const string& directorioSa
 	long double aa = getcputime();
 
 	//Declarar indexador
-	IndexadorHash ind("./StopWordsEspanyol.txt", " .,:;/-@*(){}?!|[]'=_\"><&#-\r\t", false, false, "./indicePrueba", 0, false, true);
+	IndexadorHash ind("./StopWordsIngles.txt", " .,:;/-@*(){}?!|[]'=_\"><&#-\r\t", false, true, "./indicePrueba", 0, false, true);
 
 	//Indexar directorio
 	if(testIndexarDirectorio(ind,directorioPruebas,directorioSalida,tiempo))
