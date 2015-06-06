@@ -57,8 +57,8 @@ const char* EXTENSION_BUSQUEDA="search";
 const char* NOMBRE_DFR="DFR";
 const char* NOMBRE_BM25="BM25";
 
-const int NUM_DOCUMENTOS_INDEXAR = 50;
-const int NUM_DOCUMENTOS_MOSTRAR = 25;
+const int NUM_DOCUMENTOS_INDEXAR = 423;
+const int NUM_DOCUMENTOS_MOSTRAR = 423;
 const int NUM_PREGUNTA_INICIO = 1;
 const int NUM_PREGUNTA_FIN=83;
 
