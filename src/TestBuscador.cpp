@@ -98,7 +98,7 @@ void buscador02()
 	//Limpiar el buffer
 	buffer.str("");
 	buffer.clear();
-	esperado = "0 BM25 fichero1 0 0 pal1 pal7\n";
+	esperado = "";
 
 	ASSERT_EQUAL(esperado,sal);
 
@@ -111,7 +111,7 @@ namespace felixem
 	//Tad recogido del pdf pero sin solución del profesor
 	void buscador01()
 	{
-		IndexadorHash b("./StopWordsEspanyol.txt", ". 	,:", false, false,
+		IndexadorHash b("./StopWordsEspanyol.txt", ". 	,:", false, true,
 				"./indicePrueba", 0, false, false);
 
 		ASSERT_EQUAL(true,b.Indexar("./listaFicheros_corto.txt"));
@@ -134,7 +134,7 @@ namespace felixem
 				<< "\tNo hay ninguna pregunta indexada\n"
 				<< "\tDatos del indexador: \n"
 				<< "Fichero con el listado de palabras de parada: ./StopWordsEspanyol.txt\n"
-				<< "Tokenizador: DELIMITADORES: . 	,: TRATA CASOS ESPECIALES: 0 PASAR A MINUSCULAS Y SIN ACENTOS: 0\n"
+				<< "Tokenizador: DELIMITADORES: . 	,: TRATA CASOS ESPECIALES: 0 PASAR A MINUSCULAS Y SIN ACENTOS: 1\n"
 				<< "Directorio donde se almacenara el indice generado: ./indicePrueba\n"
 				<< "Stemmer utilizado: 0\n"
 				<<"Informacion de la coleccion indexada: "
@@ -176,8 +176,7 @@ namespace felixem
 		bufEsperado.clear();
 		bufEsperado.str("");
 
-		bufEsperado<<"0 DFR fichero1 0 0 documentos sobre la Guerra Civil española\n"
-				<<"0 DFR fichero2 1 0 documentos sobre la Guerra Civil española\n";
+		bufEsperado<<"";
 
 		esperado = bufEsperado.str();
 
@@ -202,8 +201,7 @@ namespace felixem
 		bufEsperado.str("");
 
 		//Determinar salida esperada
-		bufEsperado<<"0 BM25 fichero1 0 0 documentos sobre la Guerra Civil española\n"
-				<<"0 BM25 fichero2 1 0 documentos sobre la Guerra Civil española\n";
+		bufEsperado<<"";
 		esperado = bufEsperado.str();
 
 		ASSERT_EQUAL(esperado,salida);
