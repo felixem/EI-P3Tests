@@ -8,3 +8,5 @@ make
 #Nos movemos al directorio raiz y ejecutamos el programa
 cd ..
 Compile/EI-Practica3 $*
+#Ejecutar trec eval
+./trec_eval.sh
