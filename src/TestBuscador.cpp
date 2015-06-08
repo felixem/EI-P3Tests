@@ -98,7 +98,7 @@ void buscador02()
 	//Limpiar el buffer
 	buffer.str("");
 	buffer.clear();
-	esperado = "";
+	esperado = "0 BM25 fichero1 0 0 pal1 pal7\n";
 
 	ASSERT_EQUAL(esperado,sal);
 
@@ -176,7 +176,8 @@ namespace felixem
 		bufEsperado.clear();
 		bufEsperado.str("");
 
-		bufEsperado<<"";
+		bufEsperado<<"0 DFR fichero1 0 0 documentos sobre la Guerra Civil española\n"
+				<< "0 DFR fichero2 1 0 documentos sobre la Guerra Civil española\n";
 
 		esperado = bufEsperado.str();
 
@@ -201,7 +202,8 @@ namespace felixem
 		bufEsperado.str("");
 
 		//Determinar salida esperada
-		bufEsperado<<"";
+		bufEsperado<<"0 BM25 fichero1 0 0 documentos sobre la Guerra Civil española\n"
+				<<"0 BM25 fichero2 1 0 documentos sobre la Guerra Civil española\n";
 		esperado = bufEsperado.str();
 
 		ASSERT_EQUAL(esperado,salida);
